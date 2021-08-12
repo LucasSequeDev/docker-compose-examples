@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+
+  api:
+    container_name: app_node_mysql
+    restart: always
+    build: .
+    depends_on: 
+      - mysql
+    ports:
+      - 8080:3000
+    links: 
+      - mysql
+    volumes:
+      - ./:/usr/src/app
+
+  mysql:
+    image: mysql:5.7
+    command: --innodb_use_native_aio=0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: drowssap
+      MYSQL_DATABASE: mongodb_test
+    volumes:
+      - ./db:/var/lib/mysql
+    
