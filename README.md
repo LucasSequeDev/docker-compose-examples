@@ -6,6 +6,6 @@ En este repositorio hay ejemplos de despliegue de aplicacion con Docker y Docker
 
 Los ejemplos son minimalistas para entender el despligue de aplicaciones e ir escalandolas.
 
-[x] App backend NodeJS + MongoDB
-[x] App backend NodeJS + MYSQL
-[] App backend PHP + MYSQL
+* App backend NodeJS + MongoDB
+* App backend NodeJS + MYSQL
+* App backend PHP + MYSQL
