@@ -4,8 +4,17 @@
 
 En este repositorio hay ejemplos de despliegue de aplicacion con Docker y Docker-Compose.
 
-Los ejemplos son minimalistas para entender el despligue de aplicaciones e ir escalandolas.
-
-* App backend NodeJS + MongoDB
-* App backend NodeJS + MYSQL
-* App backend PHP + MYSQL
+- [ ]  NODEJS + NGINX 
+- [x]  NODEJS + MONGODB
+- [x]  NODEJS + MONGODB + NGINX
+- [x]  NODEJS + MYSQL
+- [x]  NODEJS + MYSQL + NGINX
+- [ ]  NODEJS + POSTGRESQL
+- [ ]  NODEJS + REDIS
+- [ ]  PHP + REDIS
+- [x]  PHP + MYSQL + NGINX
+- [ ]  LARAVEL + MYSQL + REDIS + NGINX
+- [ ]  PYTHON + MONGODB
+- [ ]  FLASK + MONGODB
+- [ ]  FLASK + MONGODB + NGINX
+- [ ]  GO + MONGODB
