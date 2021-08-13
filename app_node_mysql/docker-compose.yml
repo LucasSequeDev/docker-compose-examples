@@ -17,11 +17,12 @@ services:
 
   mysql:
     image: mysql:5.7
+    container_name: mysqldb
     command: --innodb_use_native_aio=0
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: drowssap
-      MYSQL_DATABASE: mongodb_test
+      MYSQL_DATABASE: mysql_test
     volumes:
       - ./db:/var/lib/mysql
     
