@@ -6,9 +6,9 @@ En este repositorio hay ejemplos de despliegue de aplicacion con Docker y Docker
 
 - [ ]  NODEJS + NGINX 
 - [x]  NODEJS + MONGODB
-- [x]  NODEJS + MONGODB + NGINX
+- [ ]  NODEJS + MONGODB + NGINX
 - [x]  NODEJS + MYSQL
-- [x]  NODEJS + MYSQL + NGINX
+- [ ]  NODEJS + MYSQL + NGINX
 - [ ]  NODEJS + POSTGRESQL
 - [ ]  NODEJS + REDIS
 - [ ]  PHP + REDIS
