@@ -4,7 +4,7 @@
 
 En este repositorio hay ejemplos de despliegue de aplicacion con Docker y Docker-Compose.
 
-- [ ]  NODEJS + NGINX 
+- [x]  NODEJS + NGINX 
 - [x]  NODEJS + MONGODB
 - [ ]  NODEJS + MONGODB + NGINX
 - [x]  NODEJS + MYSQL

@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+
+  api:
+    container_name: app_node_nginx
+    restart: always
+    build: .
+    volumes:
+      - ./:/usr/src/app
+
+  nginx:
+    image: nginx:1.17-alpine
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./nginx:/etc/nginx/conf.d/
+    links:
+      - api
+    
