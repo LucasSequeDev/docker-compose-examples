@@ -6,13 +6,13 @@ En este repositorio hay ejemplos de despliegue de aplicacion con Docker y Docker
 
 - [x]  NODEJS + NGINX 
 - [x]  NODEJS + MONGODB
-- [ ]  NODEJS + MONGODB + NGINX
+- [x]  NODEJS + MONGODB + NGINX
 - [x]  NODEJS + MYSQL
+- [x]  PHP + MYSQL + NGINX
 - [ ]  NODEJS + MYSQL + NGINX
 - [ ]  NODEJS + POSTGRESQL
 - [ ]  NODEJS + REDIS
 - [ ]  PHP + REDIS
-- [x]  PHP + MYSQL + NGINX
 - [ ]  LARAVEL + MYSQL + REDIS + NGINX
 - [ ]  PYTHON + MONGODB
 - [ ]  FLASK + MONGODB

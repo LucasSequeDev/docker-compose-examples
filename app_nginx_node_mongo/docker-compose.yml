@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+
+  api:
+    container_name: app_node
+    restart: always
+    build: .
+    depends_on: 
+      - mongo
+    links: 
+      - mongo
+    volumes:
+      - ./:/var/www
+
+  mongo:
+    container_name: mongodb
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_DATABASE: mongodb_test
+    volumes:
+    - ./mongo-volume:/data/db
+
+  nginx:
+    image: nginx:1.17-alpine
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./src:/var/www
+      - ./nginx:/etc/nginx/conf.d/
+    links:
+      - api
