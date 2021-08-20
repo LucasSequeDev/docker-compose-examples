@@ -9,7 +9,7 @@ En este repositorio hay ejemplos de despliegue de aplicacion con Docker y Docker
 - [x]  NODEJS + MONGODB + NGINX
 - [x]  NODEJS + MYSQL
 - [x]  PHP + MYSQL + NGINX
-- [x]  DJANGO + REACT + NGINX
+- [x]  DJANGO + REACT + MONGODB
 - [ ]  NODEJS + MYSQL + NGINX
 - [ ]  NODEJS + POSTGRESQL
 - [ ]  NODEJS + REDIS
