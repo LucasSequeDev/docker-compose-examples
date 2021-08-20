@@ -1,0 +1,56 @@
+version: '3.1'
+
+services:
+  django-service:
+    container_name: backendapp
+    image: django-py:1
+    build:
+      context: python-django-docker
+    command: python /home/backendapp/manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../app/backendapp:/home/backendapp
+  
+  react-service:    
+    container_name: frontendapp
+    image: react:1
+    build:
+      context: ../app/frontend/
+    command: npm start
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    volumes:
+      - ../app/frontend:/usr/src/frontend/frontend-app
+      - /usr/src/frontend/frontend-app/node_modules
+  
+  mongodb:
+    container_name: mongo-db
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: root-db
+    ports:
+      - "27017:27017"
+
+  mongo-express:
+    container_name: mongo-express
+    image: mongo-express:latest
+    depends_on:
+      - mongodb
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo-dev
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: example
+    ports:
+      - 8081:8081
